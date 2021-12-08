@@ -32,6 +32,7 @@
 #include <util/delay.h>
 #include "mIO.h"
 #include <avr/interrupt.h>
+#include <avr/eeprom.h>
 //#include "mLCD.h"
 
 #endif	/* CONFIG_H */

@@ -16,6 +16,8 @@ build/default/production/mExternalInterrupt.o.d \
  c:\program\ files\microchip\xc8\v2.32\avr\avr\include\util\delay_basic.h \
  c:\program\ files\microchip\xc8\v2.32\avr\avr\include\math.h mIO.h \
  c:\program\ files\microchip\xc8\v2.32\avr\avr\include\avr\interrupt.h \
+ c:\program\ files\microchip\xc8\v2.32\avr\avr\include\avr\eeprom.h \
+ c:\program\ files\microchip\xc8\v2.32\avr\lib\gcc\avr\5.4.0\include\stddef.h \
  mExternalInterrupt.h
 
 c:\program\ files\microchip\xc8\v2.32\avr\avr\include\avr\io.h:
@@ -51,5 +53,9 @@ c:\program\ files\microchip\xc8\v2.32\avr\avr\include\math.h:
 mIO.h:
 
 c:\program\ files\microchip\xc8\v2.32\avr\avr\include\avr\interrupt.h:
+
+c:\program\ files\microchip\xc8\v2.32\avr\avr\include\avr\eeprom.h:
+
+c:\program\ files\microchip\xc8\v2.32\avr\lib\gcc\avr\5.4.0\include\stddef.h:
 
 mExternalInterrupt.h:
