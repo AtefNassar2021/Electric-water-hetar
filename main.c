@@ -6,7 +6,7 @@
 #include "mADC.h"
 #include "mSSD.h"
 #include "mExternalInterrupt.h"
-
+#include <math.h>
 /*****************VARIABLES*****************/
 
 static float temp = 60; //Initial Temp
@@ -38,24 +38,28 @@ ISR(TIMER0_COMP_vect) {
     static int t = 0;
     static int h = 0;
     static int c = 0;
-    int AC = 20; //Address Counter
+    char* AC = (char*) 20;
+    ; //Address Counter
     float temp1 = temp;
     t++;
     h++;
     c++;
     if (t == 100) { // CPU FRQ / PRESCALER / NO.BITS = NO.TICKS --> Req Time 100ms
         ADC_SC();
-        data = ADC_read() * (5 / 1023) * 100;
+        data = ADC_read() * 0.4887585532746823;
         eeprom_write_float((float *) AC, data);
         t = 0;
         AC += 4;
     } else {
     }
     if (h == 1000) { // CPU FRQ / PRESCALER / NO.BITS = NO.TICKS --> Req Time 1s = 1000ms
-        AC = 20;
+        AC = (char*) 20;
         value = 0;
-        for (char i = 0; i < 10; ++i) {
+        
+        for (char i = 0; i < 40;  ) {
+            AC = (char*) (20+i);
             value += eeprom_read_byte((const uint8_t*) AC); /* Read value from 64 address */
+            i = i+4 ;
         }
         value = value / 10;
         if (PINC & (1 << PC4)) {
@@ -76,42 +80,50 @@ ISR(TIMER0_COMP_vect) {
 int main(void) {
 
     /***************INITIANLIZATION**************/
-
+    setPinDir(_PC, PC2, OUT); //Cooler Is Output
+    setPinDir(_PC, PC4, OUT); //Heater Is Output
     setPortDir(_PD, IN);
     init_INT(_INT0, _Mode_Rising);
     init_INT(_INT1, _Mode_Rising);
     setOC0Mode(ClearOnComp);
-    init_Timer(CTC, _CLk_64);
-    setOutCompare(250); // 0 ~ 255  
-    sei();
+    setOutCompare(250); // 0 ~ 255 
     init_Leds();
     init_ADC(_CH0, _AVCC, _PRE128);
+    Timer_enable_INT(INT_TOC);
+    init_Timer(CTC, _CLk_64);
+
+    sei();
+
 
     /*******************ADD IO********************/
 
-    setPinDir(_PC, PC2, OUT); //Cooler Is Output
-    setPinDir(_PC, PC4, OUT); //Heater Is Output
+
 
     /****************INITIAL DATA****************/
 
 
 
     /****************DYNAMIC CODE****************/
-
-    while (isPressed(_PD, PIND4)) {
-        SvnSEG_Disp(temp / 10);
-        if (temp - data >= 5 && data != 0) {
-            setPinData(_PC, PC4, ON); //Turn ON Heater When It Reaches The Req Temp
-            _delay_ms(200);
-        } else if (data - temp >= 5 && data != 0) {
-            setPinData(_PC, PC2, ON); //Turn ON Cooler When It Reaches The Req Temp
-            _delay_ms(200);
-        }
-        if (temp == data) { // When The Temp Of Water Equals The The Req Temp
-            setPinData(_PC, PC2, OFF); //Turn OFF Cooler When It Reaches The Req Temp
-            setPinData(_PC, PC4, OFF); //Turn OFF Heater When It Reaches The Req Temp
-            set_Led(Led0, OFF);
-        } else {
+    while (1) {
+        while (isPressed(_PD, PIND4)) {
+            SvnSEG_Disp(temp / 10);
+            if ( 5 >= fabs(value - temp)) {
+                setPinData(_PC, PC2, ON); //Turn ON Heater When It Reaches The Req Temp
+                _delay_ms(200);
+            } else {
+            }
+            if ( fabs(value - temp )>= 5 ) {
+                setPinData(_PC, PC4, ON); //Turn ON Cooler When It Reaches The Req Temp
+                setPinData(_PC, PINC0, ON);
+                _delay_ms(200);
+            } else {
+            }
+            if (temp == data) { // When The Temp Of Water Equals The The Req Temp
+                setPinData(_PC, PC2, OFF); //Turn OFF Cooler When It Reaches The Req Temp
+                setPinData(_PC, PC4, OFF); //Turn OFF Heater When It Reaches The Req Temp
+                set_Led(Led0, OFF);
+            } else {
+            }
         }
     }
     return 0;
