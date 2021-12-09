@@ -11,7 +11,6 @@
 #define _AVCC       1   // 01
 #define _2_56V      3   // 11
 
-
 #define _PRE128     7  // 111
     
 void init_ADC(int _ch, int Ref, int Prescaler);

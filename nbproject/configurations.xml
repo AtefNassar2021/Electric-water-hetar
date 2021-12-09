@@ -8,7 +8,6 @@
       <itemPath>config.h</itemPath>
       <itemPath>mExternalInterrupt.h</itemPath>
       <itemPath>mTimer.h</itemPath>
-      <itemPath>mTimer2.h</itemPath>
       <itemPath>mADC.h</itemPath>
       <itemPath>mSSD.h</itemPath>
     </logicalFolder>
@@ -23,7 +22,6 @@
       <itemPath>mIO.c</itemPath>
       <itemPath>mExternalInterrupt.c</itemPath>
       <itemPath>mTimer.c</itemPath>
-      <itemPath>mTimer2.c</itemPath>
       <itemPath>mADC.c</itemPath>
       <itemPath>mSSD.c</itemPath>
     </logicalFolder>

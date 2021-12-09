@@ -1,9 +1,8 @@
 #include <avr/io.h>
 #include "config.h"
-#include "mSSD.h"
 
 void SvnSEG_Disp(float num) {
-    DDRB = 0xFF;
+    setPortDir(_PB, OUT);
     uint8_t num_int = (uint8_t) num; // Will take values from Zero to 5
     uint8_t after_point = (num - (uint8_t) num)*10; // Will take values from Zero to 9
     PORTB &= ~(1 << PB5); // Set PB5 to Zero. Use first 7SEG
