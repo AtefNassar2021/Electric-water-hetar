@@ -1,5 +1,5 @@
-build/default/production/main.o.d build/default/production/main.o: main.c \
- c:\program\ files\microchip\xc8\v2.32\avr\avr\include\avr\io.h \
+build/default/production/mTimer2.o.d build/default/production/mTimer2.o: \
+ mTimer2.c c:\program\ files\microchip\xc8\v2.32\avr\avr\include\avr\io.h \
  c:\program\ files\microchip\xc8\v2.32\avr\avr\include\avr\sfr_defs.h \
  c:\program\ files\microchip\xc8\v2.32\avr\avr\include\inttypes.h \
  c:\program\ files\microchip\xc8\v2.32\avr\lib\gcc\avr\5.4.0\include\stdint.h \
@@ -17,7 +17,7 @@ build/default/production/main.o.d build/default/production/main.o: main.c \
  c:\program\ files\microchip\xc8\v2.32\avr\avr\include\avr\interrupt.h \
  c:\program\ files\microchip\xc8\v2.32\avr\avr\include\avr\eeprom.h \
  c:\program\ files\microchip\xc8\v2.32\avr\lib\gcc\avr\5.4.0\include\stddef.h \
- mIO.h mTimer.h mTimer2.h mADC.h mSSD.h mExternalInterrupt.h
+ mIO.h mTimer2.h
 
 c:\program\ files\microchip\xc8\v2.32\avr\avr\include\avr\io.h:
 
@@ -57,12 +57,4 @@ c:\program\ files\microchip\xc8\v2.32\avr\lib\gcc\avr\5.4.0\include\stddef.h:
 
 mIO.h:
 
-mTimer.h:
-
 mTimer2.h:
-
-mADC.h:
-
-mSSD.h:
-
-mExternalInterrupt.h:

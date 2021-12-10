@@ -17,17 +17,17 @@
 #define _CLk_ext_F    6
 #define _CLk_ext_R    7
 
-#define INT_TOV       TOIE0     
-#define INT_TOC       OCIE0
+#define INT_TOV0     TOIE0     
+#define INT_TOC0     OCIE0
 
 #define ClearOnComp   2
 #define SetOnComp     3
 
 
-void init_Timer(int mode, int clockSelect);
+void init_Timer0(int mode, int clockSelect);
 
-void Timer_enable_INT(int selectINT);
-void setOutCompare(unsigned char compareValue);
+void Timer0_enable_INT(int selectINT);
+void setOutCompare0(unsigned char compareValue);
 void setOC0Mode(int OC0_Mode);
 #endif	/* MTIMER_H */
 
