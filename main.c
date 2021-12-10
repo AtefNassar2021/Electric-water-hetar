@@ -13,16 +13,15 @@
 static float temp = 60; //Initial Temp
 static float data = 0; //ADC Read
 static int avg = 0; //Average Of 10 Readings
-char i = 0;
+char i = 1;
 
 /***************PUSH BUTTONS*********/
 
 ISR(INT0_vect) { //UP Button
     if (temp < 75) { //Max Req Temp Is 75
         temp += 5; //One Click Means 5 Increments
-        setPortDir(_PB, OUT);
         SvnSEG_Disp(temp / 10);
-        i=1;
+        i = 1;
     } else {
     }
 }
@@ -30,9 +29,8 @@ ISR(INT0_vect) { //UP Button
 ISR(INT1_vect) { //DOWN Button
     if (temp > 35) { //Min Req Temp Is 35
         temp -= 5; //One Click Means 5 Increments
-        setPortDir(_PB, OUT);
         SvnSEG_Disp(temp / 10);
-        i=1;
+        i = 1;
     } else {
     }
 }
@@ -56,7 +54,6 @@ ISR(TIMER2_COMP_vect) {
         data = 0;
         if (PINC & (1 << PINC4)) {
             togglePinData(_PC, PINC0); //Heating Element Led Blink Every 1 Sec
-            h = 0;
         } else {
         }
         h = 0;
@@ -70,6 +67,7 @@ ISR(TIMER0_COMP_vect) {
         if (c == 5000) {
             setPortDir(_PB, IN);
             c = 0;
+            i = 0;
         }
     } else {
         c = 0;
@@ -119,7 +117,8 @@ int main(void) {
                 set_Led(Led0, OFF);
             } else {
             }
-            while(i){
+            while (i) {
+                setPortDir(_PB, OUT);
                 SvnSEG_Disp(temp / 10);
             }
         }
