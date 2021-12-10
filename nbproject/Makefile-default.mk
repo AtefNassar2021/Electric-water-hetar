@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=main.c mIO.c mExternalInterrupt.c mTimer.c mADC.c mSSD.c mLCD_4bit.c mTimer2.c
+SOURCEFILES_QUOTED_IF_SPACED=main.c mIO.c mExternalInterrupt.c mTimer.c mADC.c mSSD.c mTimer2.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/main.o ${OBJECTDIR}/mIO.o ${OBJECTDIR}/mExternalInterrupt.o ${OBJECTDIR}/mTimer.o ${OBJECTDIR}/mADC.o ${OBJECTDIR}/mSSD.o ${OBJECTDIR}/mLCD_4bit.o ${OBJECTDIR}/mTimer2.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/main.o.d ${OBJECTDIR}/mIO.o.d ${OBJECTDIR}/mExternalInterrupt.o.d ${OBJECTDIR}/mTimer.o.d ${OBJECTDIR}/mADC.o.d ${OBJECTDIR}/mSSD.o.d ${OBJECTDIR}/mLCD_4bit.o.d ${OBJECTDIR}/mTimer2.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/main.o ${OBJECTDIR}/mIO.o ${OBJECTDIR}/mExternalInterrupt.o ${OBJECTDIR}/mTimer.o ${OBJECTDIR}/mADC.o ${OBJECTDIR}/mSSD.o ${OBJECTDIR}/mTimer2.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/main.o.d ${OBJECTDIR}/mIO.o.d ${OBJECTDIR}/mExternalInterrupt.o.d ${OBJECTDIR}/mTimer.o.d ${OBJECTDIR}/mADC.o.d ${OBJECTDIR}/mSSD.o.d ${OBJECTDIR}/mTimer2.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/main.o ${OBJECTDIR}/mIO.o ${OBJECTDIR}/mExternalInterrupt.o ${OBJECTDIR}/mTimer.o ${OBJECTDIR}/mADC.o ${OBJECTDIR}/mSSD.o ${OBJECTDIR}/mLCD_4bit.o ${OBJECTDIR}/mTimer2.o
+OBJECTFILES=${OBJECTDIR}/main.o ${OBJECTDIR}/mIO.o ${OBJECTDIR}/mExternalInterrupt.o ${OBJECTDIR}/mTimer.o ${OBJECTDIR}/mADC.o ${OBJECTDIR}/mSSD.o ${OBJECTDIR}/mTimer2.o
 
 # Source Files
-SOURCEFILES=main.c mIO.c mExternalInterrupt.c mTimer.c mADC.c mSSD.c mLCD_4bit.c mTimer2.c
+SOURCEFILES=main.c mIO.c mExternalInterrupt.c mTimer.c mADC.c mSSD.c mTimer2.c
 
 
 
@@ -130,12 +130,6 @@ ${OBJECTDIR}/mSSD.o: mSSD.c  .generated_files/flags/default/d1fea76efd01e691f620
 	@${RM} ${OBJECTDIR}/mSSD.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1 -g -DDEBUG  -gdwarf-2  -x c -D__$(MP_PROCESSOR_OPTION)__   -mdfp="${DFP_DIR}/xc8"  -Wl,--gc-sections -O1 -ffunction-sections -fdata-sections -fshort-enums -funsigned-char -funsigned-bitfields -Wall -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3     -MD -MP -MF "${OBJECTDIR}/mSSD.o.d" -MT "${OBJECTDIR}/mSSD.o.d" -MT ${OBJECTDIR}/mSSD.o -o ${OBJECTDIR}/mSSD.o mSSD.c 
 	
-${OBJECTDIR}/mLCD_4bit.o: mLCD_4bit.c  .generated_files/flags/default/6f22301e8b0c0d1a4e6cc58f51cff0fd4a599dbf .generated_files/flags/default/2f9e58fd8ce1a2611b0e0fd33168db129b9285f3
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/mLCD_4bit.o.d 
-	@${RM} ${OBJECTDIR}/mLCD_4bit.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1 -g -DDEBUG  -gdwarf-2  -x c -D__$(MP_PROCESSOR_OPTION)__   -mdfp="${DFP_DIR}/xc8"  -Wl,--gc-sections -O1 -ffunction-sections -fdata-sections -fshort-enums -funsigned-char -funsigned-bitfields -Wall -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3     -MD -MP -MF "${OBJECTDIR}/mLCD_4bit.o.d" -MT "${OBJECTDIR}/mLCD_4bit.o.d" -MT ${OBJECTDIR}/mLCD_4bit.o -o ${OBJECTDIR}/mLCD_4bit.o mLCD_4bit.c 
-	
 ${OBJECTDIR}/mTimer2.o: mTimer2.c  .generated_files/flags/default/77fd41836d708477c783e28097b69652acb721e5 .generated_files/flags/default/2f9e58fd8ce1a2611b0e0fd33168db129b9285f3
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/mTimer2.o.d 
@@ -178,12 +172,6 @@ ${OBJECTDIR}/mSSD.o: mSSD.c  .generated_files/flags/default/b393ba3ddc92051ed07a
 	@${RM} ${OBJECTDIR}/mSSD.o.d 
 	@${RM} ${OBJECTDIR}/mSSD.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -x c -D__$(MP_PROCESSOR_OPTION)__   -mdfp="${DFP_DIR}/xc8"  -Wl,--gc-sections -O1 -ffunction-sections -fdata-sections -fshort-enums -funsigned-char -funsigned-bitfields -Wall -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3     -MD -MP -MF "${OBJECTDIR}/mSSD.o.d" -MT "${OBJECTDIR}/mSSD.o.d" -MT ${OBJECTDIR}/mSSD.o -o ${OBJECTDIR}/mSSD.o mSSD.c 
-	
-${OBJECTDIR}/mLCD_4bit.o: mLCD_4bit.c  .generated_files/flags/default/b14f25583e193078fb4dfeeb433414b7309225d0 .generated_files/flags/default/2f9e58fd8ce1a2611b0e0fd33168db129b9285f3
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/mLCD_4bit.o.d 
-	@${RM} ${OBJECTDIR}/mLCD_4bit.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -x c -D__$(MP_PROCESSOR_OPTION)__   -mdfp="${DFP_DIR}/xc8"  -Wl,--gc-sections -O1 -ffunction-sections -fdata-sections -fshort-enums -funsigned-char -funsigned-bitfields -Wall -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3     -MD -MP -MF "${OBJECTDIR}/mLCD_4bit.o.d" -MT "${OBJECTDIR}/mLCD_4bit.o.d" -MT ${OBJECTDIR}/mLCD_4bit.o -o ${OBJECTDIR}/mLCD_4bit.o mLCD_4bit.c 
 	
 ${OBJECTDIR}/mTimer2.o: mTimer2.c  .generated_files/flags/default/c5f5ba003cc0965eeab72a90920c64ebf9d5de65 .generated_files/flags/default/2f9e58fd8ce1a2611b0e0fd33168db129b9285f3
 	@${MKDIR} "${OBJECTDIR}" 

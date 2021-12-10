@@ -42,12 +42,6 @@ c:/program files/microchip/xc8/v2.32/avr/bin/../lib/gcc/avr/5.4.0/avr5/memx-cons
                               C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/ATmega_DFP/2.3.126/xc8/avr/lib/avr5/memx-const/crtatmega32a.o (exit)
 c:/program files/microchip/xc8/v2.32/avr/bin/../lib/gcc/avr/5.4.0/avr5/memx-const\libgcc.a(_copy_data.o)
                               build/default/production/main.o (__do_copy_data)
-c:/program files/microchip/xc8/v2.32/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/memx-const\libc.a(itoa_ncheck.o)
-                              build/default/production/mLCD_4bit.o (__itoa_ncheck)
-c:/program files/microchip/xc8/v2.32/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/memx-const\libc.a(utoa_ncheck.o)
-                              c:/program files/microchip/xc8/v2.32/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/memx-const\libc.a(itoa_ncheck.o) (__utoa_common)
-c:/program files/microchip/xc8/v2.32/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/memx-const\libc.a(strrev.o)
-                              c:/program files/microchip/xc8/v2.32/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/memx-const\libc.a(utoa_ncheck.o) (strrev)
 
 Discarded input sections
 
@@ -89,35 +83,6 @@ Discarded input sections
  .text          0x0000000000000000        0x0 build/default/production/mSSD.o
  .data          0x0000000000000000        0x0 build/default/production/mSSD.o
  .bss           0x0000000000000000        0x0 build/default/production/mSSD.o
- .text          0x0000000000000000        0x0 build/default/production/mLCD_4bit.o
- .data          0x0000000000000000        0x0 build/default/production/mLCD_4bit.o
- .bss           0x0000000000000000        0x0 build/default/production/mLCD_4bit.o
- .text.LCD_enable_4bit
-                0x0000000000000000       0x2e build/default/production/mLCD_4bit.o
- .text.LCD_write_4bit
-                0x0000000000000000       0x56 build/default/production/mLCD_4bit.o
- .text.LCD_write_str_4bit
-                0x0000000000000000       0x1e build/default/production/mLCD_4bit.o
- .text.LCD_write_num_4bit
-                0x0000000000000000       0x3a build/default/production/mLCD_4bit.o
- .text.LCD_cmd_4bit
-                0x0000000000000000       0x62 build/default/production/mLCD_4bit.o
- .text.LCD_clear_4bit
-                0x0000000000000000       0x14 build/default/production/mLCD_4bit.o
- .text.init_LCD_4bit
-                0x0000000000000000       0x7a build/default/production/mLCD_4bit.o
- .text.LCD_goto_4bit
-                0x0000000000000000       0x1e build/default/production/mLCD_4bit.o
- .debug_info    0x0000000000000000      0x91c build/default/production/mLCD_4bit.o
- .debug_abbrev  0x0000000000000000      0x1be build/default/production/mLCD_4bit.o
- .debug_loc     0x0000000000000000      0x3c6 build/default/production/mLCD_4bit.o
- .debug_aranges
-                0x0000000000000000       0x58 build/default/production/mLCD_4bit.o
- .debug_ranges  0x0000000000000000       0x48 build/default/production/mLCD_4bit.o
- .debug_line    0x0000000000000000      0x27e build/default/production/mLCD_4bit.o
- .debug_str     0x0000000000000000       0x23 build/default/production/mLCD_4bit.o
- .comment       0x0000000000000000       0x30 build/default/production/mLCD_4bit.o
- .debug_frame   0x0000000000000000       0xc0 build/default/production/mLCD_4bit.o
  .text          0x0000000000000000        0x0 build/default/production/mTimer2.o
  .data          0x0000000000000000        0x0 build/default/production/mTimer2.o
  .bss           0x0000000000000000        0x0 build/default/production/mTimer2.o
@@ -250,30 +215,6 @@ Discarded input sections
                 0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.32/avr/bin/../lib/gcc/avr/5.4.0/avr5/memx-const\libgcc.a(_copy_data.o)
  .text.libgcc.fixed
                 0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.32/avr/bin/../lib/gcc/avr/5.4.0/avr5/memx-const\libgcc.a(_copy_data.o)
- .text          0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.32/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/memx-const\libc.a(itoa_ncheck.o)
- .data          0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.32/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/memx-const\libc.a(itoa_ncheck.o)
- .bss           0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.32/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/memx-const\libc.a(itoa_ncheck.o)
- .text.avrlibc  0x0000000000000000       0x16 c:/program files/microchip/xc8/v2.32/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/memx-const\libc.a(itoa_ncheck.o)
- .stack.descriptors.hdr
-                0x0000000000000000        0xe c:/program files/microchip/xc8/v2.32/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/memx-const\libc.a(itoa_ncheck.o)
- .stack.descriptors
-                0x0000000000000000       0x1b c:/program files/microchip/xc8/v2.32/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/memx-const\libc.a(itoa_ncheck.o)
- .text          0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.32/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/memx-const\libc.a(utoa_ncheck.o)
- .data          0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.32/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/memx-const\libc.a(utoa_ncheck.o)
- .bss           0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.32/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/memx-const\libc.a(utoa_ncheck.o)
- .text.avrlibc  0x0000000000000000       0x34 c:/program files/microchip/xc8/v2.32/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/memx-const\libc.a(utoa_ncheck.o)
- .stack.descriptors.hdr
-                0x0000000000000000        0xe c:/program files/microchip/xc8/v2.32/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/memx-const\libc.a(utoa_ncheck.o)
- .stack.descriptors
-                0x0000000000000000       0x36 c:/program files/microchip/xc8/v2.32/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/memx-const\libc.a(utoa_ncheck.o)
- .text          0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.32/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/memx-const\libc.a(strrev.o)
- .data          0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.32/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/memx-const\libc.a(strrev.o)
- .bss           0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.32/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/memx-const\libc.a(strrev.o)
- .text.avrlibc  0x0000000000000000       0x20 c:/program files/microchip/xc8/v2.32/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/memx-const\libc.a(strrev.o)
- .stack.descriptors.hdr
-                0x0000000000000000        0xe c:/program files/microchip/xc8/v2.32/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/memx-const\libc.a(strrev.o)
- .stack.descriptors
-                0x0000000000000000       0x14 c:/program files/microchip/xc8/v2.32/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/memx-const\libc.a(strrev.o)
 
 Memory Configuration
 
@@ -297,7 +238,6 @@ LOAD build/default/production/mExternalInterrupt.o
 LOAD build/default/production/mTimer.o
 LOAD build/default/production/mADC.o
 LOAD build/default/production/mSSD.o
-LOAD build/default/production/mLCD_4bit.o
 LOAD build/default/production/mTimer2.o
 START GROUP
 LOAD c:/program files/microchip/xc8/v2.32/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/memx-const\libm.a

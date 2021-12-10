@@ -10,7 +10,6 @@
       <itemPath>mTimer.h</itemPath>
       <itemPath>mADC.h</itemPath>
       <itemPath>mSSD.h</itemPath>
-      <itemPath>mLCD_4bit.h</itemPath>
       <itemPath>mTimer2.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
@@ -26,7 +25,6 @@
       <itemPath>mTimer.c</itemPath>
       <itemPath>mADC.c</itemPath>
       <itemPath>mSSD.c</itemPath>
-      <itemPath>mLCD_4bit.c</itemPath>
       <itemPath>mTimer2.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
