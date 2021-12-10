@@ -14,7 +14,7 @@ void SvnSEG_Disp(float num) {
     PORTB &= ~(1 << PB3); // Set PB3 to 0 
 
     PORTB |= num_int; // Set the lower 4 bits of Port D (PD0 - PD3) to the bits of the number.
-    _delay_ms(30);
+    _delay_ms(40);
     PORTB |= (1 << PB5); // Set PB5 to One. Don't use first 7SEG
     PORTB &= ~(1 << PB6); // Set PB6 to Zero. Use second 7SEG
     PORTB |= (1 << PB4); // Set PB4 turning on the Decimal point.
@@ -24,5 +24,5 @@ void SvnSEG_Disp(float num) {
     PORTB &= ~(1 << PB3); // Set PB3 to 0
 
     PORTB |= after_point; // Set the lower 4 bits of Port D (PD0 - PD3) to the bits of the number.
-    _delay_ms(30);
+    _delay_ms(40);
 }

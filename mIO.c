@@ -3,8 +3,7 @@
 
 void init_Leds() {
     // Define  Data Direction as OUTPUT for each pin connected to LED
-    DDRC |= (1 << Led0) | (1 << Led1);
-    DDRC |= (1 << Led2);
+    DDRC |= (1 << Led0);
 }
 
 void init_Relay() {
@@ -25,45 +24,21 @@ void set_Relay(int state) {
 }
 void set_Buzzer(int state) {
     if (state) {
-        PORTA |= (1 << Buzzer); // Relay ON
+        PORTA |= (1 << Buzzer); // Buzzer ON
     } else {
-        PORTA &= ~(1 << Buzzer); // Relay OFF
+        PORTA &= ~(1 << Buzzer); // Buzzer OFF
     }
 }
 
 void set_Led(int LedNumber, int state) {
-
-
-    if (state) {
-        switch (LedNumber) {
-            case Led0:
-                PORTC |= (1 << Led0); // LED 0  >> ON
-                break;
-            case Led1:
-                PORTC |= (1 << Led1);
-                break;
-            case Led2:
-                //PORTD |= (1 << Led2);
-                setPinData(_PD, Led2, ON);
-                break;
-        }
-    } else {
-        switch (LedNumber) {
-            case Led0:
-                PORTC &= ~(1 << Led0); // LED 0 >> OFF
-                break;
-            case Led1:
-                PORTC &= ~(1 << Led1);
-                break;
-            case Led2:
-                PORTD &= ~(1 << Led2);
-                break;
-        }
+    switch (state){
+        case ON:
+            PORTC |= (1 << Led0); // LED 0  >> ON
+            break;
+        case OFF:
+            PORTC &= ~(1 << Led0); // LED 0  >> OFF
+            break;
     }
-
-
-
-
 }
 
 void init_Buttons() {
@@ -288,8 +263,7 @@ void setPinData(int portNum, int pinNum, int data) {
                 PORTD &= ~(1 << pinNum);
                 break;
             default:
-                ;
-
+                break;
         }
     }
 }
@@ -309,7 +283,7 @@ void togglePinData(int portNum, int pinNum) {
             PORTD ^= (1 << pinNum);
             break;
         default:
-            ;
+            break;
 
     }
 
